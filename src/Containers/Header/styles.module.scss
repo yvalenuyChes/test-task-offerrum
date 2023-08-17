@@ -1,0 +1,54 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.header{
+ 
+  height: 100vh;
+  width: 100vw;
+  background-color: #080128;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container{
+    @include container;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__image{
+    z-index: 2;
+    right: 0;
+    position: absolute;
+  }
+
+  &__text{
+    z-index: 4;
+  }
+
+
+  &__title{
+    font-size: 60px;
+    color: white;
+    font-weight: 400;
+
+    span{
+      font-weight: 700;
+    }
+  }
+
+  &__subtitle{
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    color: $grey_color;
+    line-height: 27px;
+  }
+
+  &__button{
+    padding-top: 60px;
+  }
+}

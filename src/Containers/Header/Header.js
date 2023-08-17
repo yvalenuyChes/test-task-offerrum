@@ -1,6 +1,6 @@
 import Button from '../../Components/Button/Button'
 import styles from './styles.module.scss'
-import header__image from '../../images/header_man.png'
+import header__image from '../../images/Header/header_man.png'
 
 export default function Header(){
    return(
@@ -14,7 +14,7 @@ export default function Header(){
                   Получи все нужные навыки для заработка <br/> на NFT всего за 28 дней!
                </p>
                <div className={styles.header__button} >
-                  <Button text={'Начать зарабатывать на NFT'} />
+                  <Button text={'Начать зарабатывать на NFT'}/>
                </div>
             </div>
             <div className={styles.header__image} >

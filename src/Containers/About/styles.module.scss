@@ -1,0 +1,41 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.about{
+   // background-color: $background_color;
+   padding-bottom: 50px;
+   z-index: -5;
+
+   &__container{
+      @include container;
+   }
+
+   &__title{
+      text-align: center;
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 50px;
+      color: white;
+      padding: 70px 0;
+   }
+
+   &__grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 50px;
+   }
+}
+
+//adaptive
+
+@media (max-width:1000px) {
+   .about{
+
+      &__grid{
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr;
+      }
+   }
+}

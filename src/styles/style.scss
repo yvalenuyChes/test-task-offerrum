@@ -1,3 +1,6 @@
+@import '../styles/variables';
+
 body{
-   font-family: 'Inter', sans-serif
+   font-family: 'Inter', sans-serif;
+   background-color: $background_color;
 }

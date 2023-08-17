@@ -9,8 +9,15 @@
    width: 100%;
    //!
    height: 55px;
+   padding: 30px 0 0 0;
+
+
+   &__button{
+      display: none;
+   }
 
    &__container{
+      position: relative;
       @include container;
       display: flex;
       justify-content: space-between;
@@ -19,15 +26,42 @@
    &__logo{
       display: flex;
       align-items: center;
+      justify-content: space-between;
       color: white;
+      font-size: 25px;
+      font-weight: 400;
+      width: 100px;
+
    }
 
    &__text{
       display: flex;
-      width: 40%;
+      width: 60%;
       justify-content: space-between;
       align-items: center;
       font-size: 23px;
       color: $grey_color;
+   }
+}
+
+
+//adaptive
+
+.nav{
+   
+   &__text {
+      position: absolute;
+      right: 0;
+      top: -30px;
+      height: 400px;
+      background-color: #293344;
+      flex-direction: column;
+      z-index: 999;
+      justify-content: center;
+      border-bottom-left-radius: 20px;
+      li{
+         padding: 20px 0;
+      }
+
    }
 }

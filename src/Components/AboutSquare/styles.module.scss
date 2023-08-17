@@ -1,0 +1,32 @@
+.about_square{
+   color: white;
+   position: relative;
+   background-color: #303b4d;
+   border-radius: 20px;
+   width: 300px;
+   height: 310px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+   justify-self: center;
+  
+   &::after{
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left:50%;
+      transform:translate(-50%, 0);
+      width: 90%;
+      height: 50px;
+      border-radius: 20px;
+      background-color: #2a3445;
+      z-index: -2;
+   }
+
+
+   &__text{
+      padding: 20px;
+   }
+}

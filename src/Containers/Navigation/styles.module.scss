@@ -2,14 +2,15 @@
 @import '../../styles/_variables.scss';
 
 .nav{
-   position: absolute;
+   position: fixed;
    top: 0;
    left: 0;
    //!
    width: 100%;
    //!
    height: 55px;
-   padding: 30px 0 0 0;
+   // padding: 30px 0 0 0;
+   z-index: 500;
 
 
    &__button{
@@ -17,10 +18,11 @@
    }
 
    &__container{
-      position: relative;
       @include container;
       display: flex;
       justify-content: space-between;
+      padding-top: 20px;
+      position: relative;
    }
 
    &__logo{
@@ -47,21 +49,90 @@
 
 //adaptive
 
-.nav{
+@media (max-width:767px) {
+   .nav{
    
-   &__text {
-      position: absolute;
-      right: 0;
-      top: -30px;
-      height: 400px;
-      background-color: #293344;
-      flex-direction: column;
-      z-index: 999;
-      justify-content: center;
-      border-bottom-left-radius: 20px;
-      li{
-         padding: 20px 0;
+      &__text {
+         transition: all .5s ease;
+         padding: 0 30px;
+         position: absolute;
+         right: 0;
+         top: -1000%;
+         height: 400px;
+         background-color: #293344;
+         flex-direction: column;
+         z-index: 980;
+         justify-content: center;
+         align-items: start;
+         border-bottom-left-radius: 20px;
+         li{
+            padding: 20px 0;
+   
+         }
+   
       }
 
+
+      &__text.active{
+         top: 0;
+      }
+
+      &__button{
+        
+         display: block;
+         width: 30px;
+         height: 20px;
+         position: relative;
+         z-index: 999;
+         
+
+         .button{
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            top: 9px;
+
+         }
+
+         &::after,
+         &::before{
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+         }
+
+         &::after{
+          top: 0;
+         }
+
+        
+
+         &::before{
+          bottom: 0;
+         }
+
+        
+
+      }
+
+      &__button.active{
+
+         //!!!!!!!!!!!
+         transition: all .5s ease;
+         &::after{
+            top: 9px;
+	         transform: rotate(45deg);
+           }
+
+         &::before{
+            transform: rotate(-45deg);
+            bottom: 9px;
+         }
+      }
    }
 }
+

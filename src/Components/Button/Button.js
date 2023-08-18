@@ -1,9 +1,9 @@
 import styles from './styles.module.scss'
 
-export default function Button({text, type, width, transperent}){
+export default function Button({text, type, width, transperent, onClick}){
    return(
          <button 
-
+            onClick = {onClick}
             style={{
                width:width
             }}

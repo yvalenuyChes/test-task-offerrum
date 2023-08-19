@@ -15,13 +15,10 @@ export default function Header(){
    const popupState = useSelector(state => state.popupOpenState.openPopup)
    const dispatch = useDispatch()
 
-   function togglePopup(){
-      dispatch(changeState())
-      // document.body.style.filter = 'blur(5px)'
-   }
-
    return(
-      <header className={styles.header} >
+      <header className={styles.header } 
+
+      >
          <div
             className={styles.header__circle}
          >
@@ -38,7 +35,7 @@ export default function Header(){
                <div className={styles.header__button} >
                   <Button 
                   text={'Начать зарабатывать на NFT'} 
-                  onClick={togglePopup}
+                  onClick={() => dispatch(changeState())}
                   />
                </div>
             </div>
@@ -49,12 +46,6 @@ export default function Header(){
                <img src={header__image} alt='header_image' />
             </div>
          </div>
-
-         {
-            popupState
-            ?<PopupWindow/>
-            : null
-         }
       </header>
    )
 }

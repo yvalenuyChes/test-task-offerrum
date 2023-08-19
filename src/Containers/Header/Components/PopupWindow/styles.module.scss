@@ -1,8 +1,82 @@
 
 
 .popup_window{
-   position: absolute;
-   height: 400px;
-   width: 600px;
-   background-color: black;
+   position:absolute;
+   height: 425px;
+   width: 670px;
+   border-radius: 15px;
+   color: white;
+   background: radial-gradient(42.84% 203.07% at 15.58% -40.39%, #323E51 0%, #1D2532 100%);
+   text-align: left;
+   z-index: 1000;
+  
+
+   &__wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
+     
+   }
+
+   &__main_content__wrapper{
+      width: 400px;
+   }
+
+   &__circle{
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      top: 0;
+   }
+
+   &__close_button{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 20px;
+
+
+      &::before,
+      &::after{
+         cursor: pointer;
+         position: absolute;
+         display: block;
+         content: '';
+         width: 100%;
+         height: 2px;
+         background-color: #fff;
+
+      }
+
+      &::after{
+         bottom: 9px;
+         transform: rotate(45deg);
+
+        }
+
+      &::before{
+         transform: rotate(-45deg);
+         top: 9px;
+      }
+   }
+
+
+   &__title{
+      font-size: 30px;
+      padding-bottom: 30px;
+   }
+   
+   &__subtitle{
+      padding-bottom: 30px;
+   }
+
+   &__input{
+      padding-bottom: 30px;
+   }
+
 }

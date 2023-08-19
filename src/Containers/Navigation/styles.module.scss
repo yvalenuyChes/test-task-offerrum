@@ -2,7 +2,7 @@
 @import '../../styles/_variables.scss';
 
 .nav{
-   position: fixed;
+   position: absolute;
    top: 0;
    left: 0;
    //!
@@ -49,7 +49,7 @@
 
 //adaptive
 
-@media (max-width:767px) {
+@media (max-width:1000px) {
    .nav{
    
       &__text {

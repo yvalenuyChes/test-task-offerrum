@@ -4,10 +4,17 @@
 .header{
  
   height: 100vh;
-
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+
+
+  &__circle{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 
   &__container{
     @include container;
@@ -25,7 +32,6 @@
     position: absolute;
     width: 450px;
     height: 510px;
-    border-radius: 100%;
 
     img{
       width: 100%;
@@ -39,8 +45,7 @@
 
 
   &__title{
-    // font-size: 60px;
-    @include adaptiv-font(40, 30);
+    @include adaptiv-font(40, 25);
     color: white;
     font-weight: 400;
 
@@ -53,12 +58,20 @@
     padding-top: 30px;
     font-weight: 400;
     font-size: 20px;
+    @include adaptiv-font(20, 14);
     color: $grey_color;
     line-height: 27px;
   }
 
   &__button{
     padding-top: 60px;
+  }
+
+
+  &__small_elipse{
+    position: absolute;
+    top: -50px;
+    left: 35%;
   }
 }
 
@@ -69,7 +82,19 @@
   .header{
     display: block;
     text-align: center;
-    margin-bottom: 200px;
+
+
+    &__circle{
+      left: -100px;
+      width: 300px;
+      height: 300px;
+
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
     
     &__container{
       width: 100%;
@@ -77,19 +102,27 @@
       align-items: center;
     }
 
+    &__small_elipse{
+      display: none;
+    }
+
     &__title{
-      padding-top: 150px;
+      padding-top: 80px;
     }
 
     &__subtitle{
-      padding-top: 600px;
+      padding-top: 320px;
+    }
+
+    &__button{
+      padding-top: 20px;
     }
 
     &__image{
       right: inherit;
-      top: 400px;
+      top: 180px;
       width: 300px;
-      height: 320px;
+      height: 350px;
     }
   }
 }

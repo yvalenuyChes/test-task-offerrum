@@ -1,10 +1,14 @@
 import Button from '../../Components/Button/Button'
 import styles from './styles.module.scss'
-import header__image from '../../images/Header/header_man.png'
+
 import {changeState} from '../../Redux/Slices/popupSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import PopupWindow from './Components/PopupWindow/PopupWindow'
 
+
+import header__image from '../../images/Header/header_man.png'
+import header__circle from '../../images/Header/header__large_ellipse.svg'
+import header__small_elipse from '../../images/Header/header__small_ellipse.svg'
 
 export default function Header(){
 
@@ -18,6 +22,11 @@ export default function Header(){
 
    return(
       <header className={styles.header} >
+         <div
+            className={styles.header__circle}
+         >
+            <img src={header__circle} />
+         </div>
          <div className={styles.header__container} >
             <div className={styles.header__text} >
                <p className={styles.header__title} >
@@ -32,6 +41,9 @@ export default function Header(){
                   onClick={togglePopup}
                   />
                </div>
+            </div>
+            <div className={styles.header__small_elipse}>
+               <img src={header__small_elipse} />
             </div>
             <div className={styles.header__image} >
                <img src={header__image} alt='header_image' />

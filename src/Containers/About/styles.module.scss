@@ -127,8 +127,23 @@
          }
       }
    }
-   
-  
+}
 
-   
+@media (max-width:800px) {
+   .about{
+      padding-top: 10%;
+   }
+}
+
+
+@media (max-height:500px) {
+   .about{
+      padding-top: 60%;
+   }
+}
+
+@media (max-width:360px) {
+   .about{
+      padding-top: 50px ;
+   }
 }

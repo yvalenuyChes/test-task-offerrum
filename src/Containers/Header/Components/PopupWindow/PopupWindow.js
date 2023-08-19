@@ -12,6 +12,7 @@ export default function PopupWindow(){
 
    function togglePopup(){
       dispatch(changeState())
+      document.body.classList.toggle('lock')
    }
 
 
@@ -19,7 +20,7 @@ export default function PopupWindow(){
       <form className={styles.popup_window} >
          <div className={styles.popup_window__wrapper} >
             <div className={styles.popup_window__circle} >
-               <img src={circle} />
+               <img src={circle} alt='popupWindowCircle' />
             </div>
             <div
                className={styles.popup_window__close_button}

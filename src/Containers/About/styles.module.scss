@@ -3,7 +3,6 @@
 
 .about{
    padding-bottom: 50px;
-   z-index: -5;
    position: relative;
    overflow-x: clip;
 
@@ -60,7 +59,7 @@
       font-weight: 600;
       @include adaptiv-font(30,15);
       line-height: 50px;
-      color: white;
+      color: $text_color;
       padding: 30px 0;
    }
 
@@ -74,6 +73,22 @@
 }
 
 //adaptive
+
+@media (max-width:1200px) {
+   .about{
+      &__small_circle_violet_bottom{
+         width: 100px;
+         height: 100px;
+         right: 0;
+   
+         img{
+            width: 100%;
+            height: 100%;
+         }
+      }
+   }
+   
+}
 
 @media (max-width:1000px) {
    .about{
@@ -104,17 +119,6 @@
          width: 100px;
          height: 100px;
 
-         right: 0;
-
-         img{
-            width: 100%;
-            height: 100%;
-         }
-      }
-
-      &__small_circle_violet_bottom{
-         width: 100px;
-         height: 100px;
          right: 0;
 
          img{

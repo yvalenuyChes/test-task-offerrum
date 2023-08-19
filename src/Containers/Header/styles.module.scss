@@ -18,7 +18,6 @@
 
   &__container{
     @include container;
-    //!!!!!!!!!!!!
     width: 1000px;
     display: flex;
     position: relative;
@@ -46,7 +45,7 @@
 
   &__title{
     @include adaptiv-font(40, 25);
-    color: white;
+    color: $text_color;
     font-weight: 400;
 
     span{
@@ -57,7 +56,6 @@
   &__subtitle{
     padding-top: 30px;
     font-weight: 400;
-    font-size: 20px;
     @include adaptiv-font(20, 14);
     color: $grey_color;
     line-height: 27px;
@@ -80,6 +78,42 @@
 
 @media (max-width:1000px) {
   .header{
+    text-align: center;
+
+    &__container{
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__small_elipse{
+      display: none;
+    }
+
+    &__title{
+      padding-top: 100px ;
+    }
+
+    &__subtitle{
+      padding-top: 400px;
+    }
+
+    &__button{
+      padding-top: 30px;
+    }
+
+    &__image{
+      right: inherit;
+      top: 200px;
+      width: 350px;
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .header{
     display: block;
     text-align: center;
 
@@ -94,16 +128,6 @@
         width: 100%;
         height: 100%;
       }
-    }
-    
-    &__container{
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    &__small_elipse{
-      display: none;
     }
 
     &__title{

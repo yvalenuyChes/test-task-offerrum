@@ -12,7 +12,7 @@ import small_circle_violet_bottom from '../../images/About/violet_small_elipse_b
 
 export default function About(){
    return(
-      <div className={styles.about}>
+      <div className={styles.about} id='about'>
          <div className={styles.about__big_circle_top  + ' ' + styles.circle} >
             <img src={big_circle} />
          </div>

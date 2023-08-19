@@ -14,7 +14,7 @@ export default function Navigation(){
          <div className={styles.nav__container} >
            
             <div className={styles.nav__logo}>
-               <img src={navigationElipse} />
+               <img src={navigationElipse} alt='logoCircle' />
                NFT
             </div>
             <div 
@@ -42,10 +42,10 @@ export default function Navigation(){
                   : styles.nav__text
                   }>
                   <li>
-                     Главная
+                    <a href='#header' >Главная</a> 
                   </li>
                   <li>
-                     Что даст обучение
+                     <a href='#about' >Что даст обучение</a>
                   </li>
                   <li>
                      <Button  transperent={true} text={'Личный кабинет'} />

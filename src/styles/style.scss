@@ -5,3 +5,7 @@ body{
    background-color: $background_color;
    overflow-x: hidden;
 }
+
+body.lock{
+   overflow: hidden;
+}

@@ -1,7 +1,9 @@
+@import '../../styles/variables';
+
 .about_square{
-   color: white;
+   color: $text_color;
    position: relative;
-   background-color: #303b4d;
+   background-color: $about_squere_bgc_color;
    border-radius: 20px;
    width: 300px;
    height: 310px;
@@ -21,7 +23,7 @@
       width: 90%;
       height: 50px;
       border-radius: 20px;
-      background-color: #2a3445;
+      background-color: $about_squere_after_color;
       z-index: -2;
    }
 
@@ -29,5 +31,13 @@
    &__text{
       padding: 20px;
       line-height: 25px;
+   }
+}
+
+
+@media (max-width:500px) {
+   .about_square{
+      width: 250px;
+      height: 260px;
    }
 }

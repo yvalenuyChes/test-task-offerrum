@@ -2,9 +2,7 @@ import Button from '../../Components/Button/Button'
 import styles from './styles.module.scss'
 
 import {changeState} from '../../Redux/Slices/popupSlice'
-import { useSelector, useDispatch } from 'react-redux'
-import PopupWindow from './Components/PopupWindow/PopupWindow'
-
+import { useDispatch } from 'react-redux'
 
 import header__image from '../../images/Header/header_man.png'
 import header__circle from '../../images/Header/header__large_ellipse.svg'
@@ -12,17 +10,17 @@ import header__small_elipse from '../../images/Header/header__small_ellipse.svg'
 
 export default function Header(){
 
-   const popupState = useSelector(state => state.popupOpenState.openPopup)
    const dispatch = useDispatch()
 
-   return(
-      <header className={styles.header } 
+   function togglePopup(){
+      dispatch(changeState())
+      document.body.classList.toggle('lock')
+   }
 
-      >
-         <div
-            className={styles.header__circle}
-         >
-            <img src={header__circle} />
+   return(
+      <header className={styles.header } id='header'>
+         <div className={styles.header__circle}>
+            <img src={header__circle} alt='header__circle' />
          </div>
          <div className={styles.header__container} >
             <div className={styles.header__text} >
@@ -35,15 +33,15 @@ export default function Header(){
                <div className={styles.header__button} >
                   <Button 
                   text={'Начать зарабатывать на NFT'} 
-                  onClick={() => dispatch(changeState())}
+                  onClick={togglePopup}
                   />
                </div>
             </div>
             <div className={styles.header__small_elipse}>
-               <img src={header__small_elipse} />
+               <img src={header__small_elipse} alt='header__small_elipse' />
             </div>
             <div className={styles.header__image} >
-               <img src={header__image} alt='header_image' />
+               <img src={header__image} alt='header_image'/>
             </div>
          </div>
       </header>
